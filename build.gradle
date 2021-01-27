@@ -6,11 +6,19 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'io.qameta.allure'
+
 repositories {
     mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
-    }
+}
+
+allure {
+    version = '2.8.1'
+    autoconfigure = true
+    aspectjweaver = true
+    boolean clean = true
+    allureJavaVersion = '2.8.1'
+
 }
 
 dependencies {
@@ -20,13 +28,15 @@ dependencies {
 
 }
 
-apply plugin: "io.qameta.allure"
 
 
 test {
     systemProperties System.properties
     useTestNG() {
         useDefaultListeners = true
+    }
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
     }
 
     // turn off Gradle's HTML report to avoid replacing the

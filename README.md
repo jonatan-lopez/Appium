@@ -1,11 +1,14 @@
 # Appium
 # BUILD
 Para buildear el proyecto se necesitaran las siguientes herramientas instaladas funcionando:
--Gradle : https://gradle.org/install/
--Java: https://java.com/en/download/
--Appium: https://appium.io/
 
-Para buildear el projecto debes correr el siguiente comando:
+Gradle : https://gradle.org/install  
+
+Java: https://java.com/en/download
+
+Appium: https://appium.io
+
+Para buildear el projecto debes correr el siguiente comando: 
 
 gradle build allure -x test
 
@@ -24,10 +27,10 @@ IDE: Para correr los tests desde el IDE deben crear un perfil de TestNG solo con
 # REPORTES:
 Para generar los reportes se debe acudir al siguiente comando:
 
-./gradlew allureReport
+gradle allureReport
 
 Y luego para visualizarlos
 
-./graldew allureServe
+gradle allureServe
 
 

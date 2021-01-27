@@ -14,6 +14,7 @@ import java.util.Set;
 public class WebViewPage extends PageObject{
     @FindBy(xpath = "//*[@class='android.widget.TextView' and @text='Login']")
     private ArrayList<AndroidElement> loginButton;
+    private By searchBox = By.id("search_input_react");
 
     public WebViewPage(AndroidDriver driver) {
         super(driver);
@@ -29,12 +30,11 @@ public class WebViewPage extends PageObject{
                 break;
             }
         }
-        driver.findElement(By.xpath("//span[@class='algolia-autocomplete']")).sendKeys("browser");
+        driver.findElement(searchBox).sendKeys("browser");
     }
     public void navigateOnWebView(){
-        ArrayList<String> locators = new ArrayList<>(Arrays.asList("Docs","API","Help","Versions","Blogs","Contribute"));
+        ArrayList<String> locators = new ArrayList<>(Arrays.asList("Docs","API","Help","Versions","Blog","Contribute"));
         locators.forEach(it->driver.findElement(By.xpath("//*[contains(text(),'"+it+"')]")).click());
-
 
     }
 }

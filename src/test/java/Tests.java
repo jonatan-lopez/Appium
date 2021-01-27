@@ -1,8 +1,7 @@
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 import pages.*;
-
-import java.net.MalformedURLException;
 
 public class Tests extends BaseTest{
 
