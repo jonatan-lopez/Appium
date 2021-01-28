@@ -1,12 +1,9 @@
-
 import helpers.FileUtils;
 import helpers.HelperAppiumService;
 import helpers.ManagerCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.net.MalformedURLException;

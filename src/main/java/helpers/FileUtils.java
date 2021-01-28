@@ -8,20 +8,6 @@ import java.util.Properties;
 
 public class FileUtils {
 
-    public String getEnvProperties(String property) {
-        String value = "";
-        try {
-        FileReader reader = new FileReader("./src/main/resources/environment/staging.properties");
-        Properties properties = new Properties();
-        properties.load(reader);
-        value = properties.getProperty(property);
-        properties.load(reader);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return value;
-    }
 
     public String getRandomAlphaNumString(int numDigits)
     {
